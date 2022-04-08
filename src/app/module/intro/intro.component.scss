@@ -1,3 +1,5 @@
+@use '../../../assets/scss/abstracts' as *;
+
 @import "../../../assets/css/_mixins", "../../../assets/css/_variables";
 
 header {
@@ -45,5 +47,8 @@ header {
             font-size: 2em;
             margin-bottom: 10px;
         }
+    }
+    @include respond-to('small') {
+        color: blue;
     }
 }
