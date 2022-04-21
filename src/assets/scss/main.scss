@@ -1,0 +1,20 @@
+// Import scss
+@use '../scss/abstracts' as abstract;
+@use '../scss/components' as component;
+
+// Import external
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+html {
+    font-size: 0.9375rem;
+    @include abstract.respond-to('small') {
+        font-size: 1rem;
+    }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    background-color: #1d1b19;
+    color: #888;
+}
