@@ -1,25 +1,27 @@
 // @use '../abstracts/index' as ;
 
-@use '../abstracts/variables' as variable;
+@use '../abstracts/index' as abstract;
 
 .main-btn {
-    // background-color: variable.$primaryColor;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
     color: #888;
-    max-width: 14.6875em;
+    max-width: 12.6875em;
     width: 100%;
-    padding: 0.9em;
-    // border: 0;
+    padding: 0.7em;
     border-radius: 0;
     outline: 0;
     transition: all 0.3s linear;
     &:hover {
-        border-color: variable.$primaryColor;
-        color: variable.$primaryColor;
+        border-color: abstract.$primaryColor;
+        color: abstract.$primaryColor;
     }
     i {
         margin-left: 0.5em;
         margin-right: 0.5em;
+    }
+    @include abstract.respond-to('small') {
+        max-width: 14.6875em;
+        padding: 0.9em;
     }
 }
