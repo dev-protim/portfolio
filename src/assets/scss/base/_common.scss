@@ -1,0 +1,14 @@
+@use '../abstracts/index' as abstract;
+
+header {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include abstract.sectionSizing;
+}
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include abstract.respond-to('medium') {
+        @include abstract.sectionSizing;
+    }
+}

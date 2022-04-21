@@ -1,0 +1,9 @@
+@use '../abstracts/index' as abstract;
+
+.card {
+    background-color: abstract.$blackDark;
+    padding: 1em 1.2em;
+    @include abstract.respond-to('small') {
+        padding: 1.2em 1.5em;
+    }
+}

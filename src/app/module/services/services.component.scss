@@ -1,0 +1,61 @@
+@use '../../../assets/scss/abstracts/index' as abstract;
+
+.service {
+    &-section {
+        padding-top: 0;
+        .row {
+            margin-top: -1.5em;
+        }
+    }
+    &-item {
+        margin-top: 1.5em;
+        &__inner {
+            height: 100%;
+            i {
+                font-size: 1em;
+                margin-bottom: 0.7em;
+            }
+            h3 {
+                font-size: 1.1em;
+                margin-bottom: 0.5em;
+                line-height: 1.4;
+            }
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+    @include abstract.respond-to('small') {
+        &-item {
+            &__inner {
+                h3 {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+    @include abstract.respond-to('medium') {
+        &-section {
+            .row {
+                margin-top: -2em;
+            }
+        }
+        &-item {
+            margin-top: 2em;
+            &__inner {
+                i {
+                    font-size: 1em;
+                    margin-bottom: 0.9em;
+                }
+                h3 {
+                    font-size: 1.3em;
+                    margin-bottom: 0.8em;
+                    line-height: 1.4;
+                }
+                p {
+                    font-size: 0.9375em;
+                }
+            }
+        }
+    }
+}
