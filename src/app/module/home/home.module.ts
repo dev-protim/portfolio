@@ -5,13 +5,15 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { ServicesComponent } from '../services/services.component';
 import { IntroComponent } from '../intro/intro.component';
+import { SkillsComponent } from '../skills/skills.component';
 
 
 @NgModule({
   declarations: [
     HomeComponent,
     IntroComponent,
-    ServicesComponent
+    ServicesComponent,
+    SkillsComponent
   ],
   imports: [
     CommonModule,
