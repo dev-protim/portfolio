@@ -9,17 +9,17 @@ export class ServicesComponent implements OnInit {
 
   services: any[] = [
     {
-      icon: "∏",
+      icon: "flaticon-monitor",
       title: "Web Design",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      icon: "∏",
+      icon: "flaticon-setting",
       title: "Web Development",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
-      icon: "∏",
+      icon: "flaticon-bug",
       title: "Bug Fixing",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }

@@ -1,0 +1,123 @@
+@use '../../../assets/scss/abstracts/index' as abstract;
+
+* {
+    --space-tb: 1.5em;
+    @include abstract.respond-to('small') {
+        --space-tb: 1.8em;
+    }
+}
+
+
+.about {
+    &-section {
+        height: auto;
+        .row {
+            margin-top: -1.5em;
+            &>* {
+                margin-top: 1.5em;
+            }
+        }
+    }
+}
+.career {
+    &-item {
+        &__area {
+            background-color: abstract.$blackDark;
+        }
+        &__inner {
+            padding-left: 6.05em;
+            padding-top: var(--space-tb);
+            padding-bottom: var(--space-tb);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h4 {
+                margin-bottom: 0.9em;
+                font-size: 0.8em;
+            }
+            p {
+                margin-bottom: 0.6em;
+                font-size: 0.8em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            p.career-item__inner--desg {
+                font-size: 1.2em;
+                color: abstract.$white;
+            }
+            &--timeline {
+                position: absolute;
+                left: 2em;
+                font-size: 0.7em;
+                width: 35px;
+                text-align: right;
+            }
+            &--start {
+                bottom: calc(var(--space-tb) + 0.4em);
+            }
+            &--end {
+                top: calc(var(--space-tb) + 0.4em);
+            }
+            &--line {
+                position: absolute;
+                top: var(--space-tb);
+                left: 4.5em;
+                width: 1px;
+                height: calc(100% - var(--space-tb) * 2);
+                background-color: rgba(255, 255, 255, 0.05);
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(35 34 32);
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: -5px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: rgb(35 34 32);
+                }
+            }
+        }
+    }
+    @include abstract.respond-to('small') {
+        &-item {
+            &__inner {
+                h4 {
+                    font-size: 0.9em;
+                }
+                p.career-item__inner--desg {
+                    font-size: 1.2em;
+                }
+                &--timeline {
+                    left: 2.15em;
+                }
+            }
+        }
+    }
+    @include abstract.respond-to('medium') {
+        &-item {
+            &__inner {
+                h4 {
+                    font-size: 1em;
+                }
+                p.career-item__inner--desg {
+                    font-size: 1.4em;
+                }
+            }
+        }
+    }
+}

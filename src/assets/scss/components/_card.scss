@@ -5,8 +5,10 @@
     padding: 1em 1.2em;
     i {
         display: inline-block;
-        font-size: 1em;
-        margin-bottom: 0.7em;
+        font-size: 1.5em;
+        margin-bottom: 0.4em;
+        line-height: 1;
+        vertical-align: middle;
     }
     h3 {
         font-size: 1.1em;
@@ -24,8 +26,7 @@
     }
     @include abstract.respond-to('medium') {
         i {
-            font-size: 1em;
-            margin-bottom: 0.9em;
+            font-size: 2em;
         }
         h3 {
             font-size: 1.3em;

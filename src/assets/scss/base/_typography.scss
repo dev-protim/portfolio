@@ -2,11 +2,19 @@
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: 400;
-    color: #ddd;
+    color: abstract.$white;
 }
 p {
     font-size: 0.9375em;
     margin-bottom: 0;
+}
+a {
+    color: abstract.$white;
+    text-decoration: none;
+    transition: color 0.3s linear;
+    &:hover {
+        color: abstract.$primaryColor;
+    }
 }
 .section-title {
     text-align: center;
@@ -45,5 +53,16 @@ p {
         h2 {
             font-size: 2.5em;
         }
+    }
+}
+.sub-section__title {
+    margin-bottom: 1.5em;
+    color: #888;
+    font-size: 1.1em;
+    @include abstract.respond-to('small') {
+        font-size: 1.2em;
+    }
+    @include abstract.respond-to('medium') {
+        font-size: 1.3em;
     }
 }

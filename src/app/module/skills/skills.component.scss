@@ -13,22 +13,10 @@
         &:last-child {
             border-right: 0;
         }
-        // &:nth-child(2n) {
-        //     border-right: 0;
-        // }
-        // &:nth-last-child(-n + 2) {
-        //     border-bottom: 0;
-        // }
     }
     @include abstract.respond-to('small') {
         &__item {
             width: 33.33%;
-            // &:nth-child(3n) {
-            //     border-right: 0;
-            // }
-            // &:nth-last-child(-n + 3) {
-            //     border-bottom: 0;
-            // }
         }
     }
     @include abstract.respond-to('medium') {

@@ -1,0 +1,30 @@
+@use '../abstracts/index' as abstract;
+
+.input {
+    &-field {
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        padding: 0.7em 1em;
+        border-radius: 0;
+        margin-top: 1em;
+        input, textarea {
+            background-color: transparent;
+            border: 0;
+            padding: 0;
+            font-size: 1em;
+            color: abstract.$white;
+            width: 100%;
+            &:active, &:focus {
+                outline: 0;
+                border: 0;
+            }
+        }
+        textarea {
+            resize: vertical;
+        }
+    }
+    @include abstract.respond-to('small') {
+        &-field {
+            padding: 0.9em 1.2em;
+        }
+    }
+}
