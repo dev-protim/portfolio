@@ -1,11 +1,9 @@
 <header>
     <div class="container">
-        <div class="header-title">
-            <div class="header-title__image">
-                <!-- <img src="assets/images/intro/me.jpg" alt="Me"> -->
-            </div>
-            <h1>Pranto Protim Roy</h1>
-            <p>I am a <strong>web developer</strong></p>
+        <div class="header-title" *ngFor="let intro of introduction | async">
+            <div class="header-title__image" [style.backgroundImage]="'url('+intro.thumb+')'"></div>
+            <h1>{{intro.name}}</h1>
+            <p>I am a <strong>{{intro.designation}}</strong></p>
             <button class="main-btn">Get Resume <i class="flaticon-download"></i></button>
         </div>
     </div>

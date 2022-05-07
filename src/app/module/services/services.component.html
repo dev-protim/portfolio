@@ -5,10 +5,10 @@
             <h2>Here Are My Services</h2>
         </div>
         <div class="row justify-content-center">
-            <div class="col-sm-6 col-md-4 service-item" *ngFor="let item of services">
+            <div class="col-sm-6 col-md-4 service-item" *ngFor="let item of services | async">
                 <div class="service-item__inner custom-card">
                     <i [class]="item.icon"></i>
-                    <h3>{{item.title}}</h3>
+                    <h3>{{item.name}}</h3>
                     <p>{{item.description}}</p>
                 </div>
             </div>

@@ -112,6 +112,16 @@
               "src/**/*.html"
             ]
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "portfolio:build:production",
+            "firebaseProject": "portfolio-f2044",
+            "firebaseHostingSite": "portfolio-f2044"
+          }
         }
       }
     }

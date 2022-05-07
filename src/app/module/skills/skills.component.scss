@@ -13,6 +13,10 @@
         &:last-child {
             border-right: 0;
         }
+        img {
+            width: 30px;
+            margin-bottom: 0.7em;
+        }
     }
     @include abstract.respond-to('small') {
         &__item {

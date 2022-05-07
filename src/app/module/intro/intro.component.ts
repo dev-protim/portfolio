@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-intro',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
-  constructor() { }
+  introduction: any;
+
+  constructor(private fs: FirebaseService) { }
 
   ngOnInit(): void {
+    this.introduction = this.fs.getIntroduction();
   }
 
 }

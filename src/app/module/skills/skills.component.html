@@ -6,7 +6,11 @@
             <button class="main-btn">Get Resume <i class="flaticon-download"></i></button>
         </div>
         <div class="skill-sets">
-            <div class="skill-sets__item custom-card">
+            <div class="skill-sets__item custom-card" *ngFor="let item of skills | async">
+                <img [src]="item.image" alt="">
+                <h3>{{item.name}}</h3>
+            </div>
+            <!-- <div class="skill-sets__item custom-card">
                 <i>∏</i>
                 <h3>HTML 5</h3>
             </div>
@@ -33,11 +37,7 @@
             <div class="skill-sets__item custom-card">
                 <i>∏</i>
                 <h3>HTML 5</h3>
-            </div>
-            <div class="skill-sets__item custom-card">
-                <i>∏</i>
-                <h3>HTML 5</h3>
-            </div>
+            </div> -->
         </div>
     </div>
 </section>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-f2044": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-f2044"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-f2044"
+  }
+}
