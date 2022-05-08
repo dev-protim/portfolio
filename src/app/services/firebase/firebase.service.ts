@@ -28,7 +28,7 @@ export class FirebaseService {
 
   // Get Services
   getServices(): Observable<Service[]> {
-    const collect = collection(this.fs, 'services')
+    const collect = collection(this.fs, 'services');
     this.services$ = collectionData(collect);
     return this.services$;
   }

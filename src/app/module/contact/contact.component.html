@@ -30,30 +30,30 @@
         </div>
         <div class="contact-form">
             <h3 class="sub-section__title">Contact Form</h3>
-            <form>
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="input-field">
-                            <input type="text" placeholder="Name*">
+                            <input type="text" placeholder="Name*" formControlName="name">
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-field">
-                            <input type="text" placeholder="Email*">
+                            <input type="text" placeholder="Email*" formControlName="email">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-field">
-                            <input type="text" placeholder="Phone">
+                            <input type="text" placeholder="Phone" formControlName="phone">
                         </div>
                     </div>
                     <div class="col-12">
                         <div class="input-field">
-                            <textarea rows="5" placeholder="Message"></textarea>
+                            <textarea rows="5" placeholder="Message" formControlName="textarea"></textarea>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <button class="main-btn">Submit</button>
+                        <button type="submit" class="main-btn">Submit</button>
                     </div>
                 </div>
             </form>
