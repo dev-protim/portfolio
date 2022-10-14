@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  isLoader: boolean = true;
+
+  ngAfterViewInit(): void {
+    const html: any = document.querySelector("html");
+    html.classList.add("loaded");
+  }
 }

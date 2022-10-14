@@ -3,6 +3,8 @@ import { collectionData, Firestore } from '@angular/fire/firestore';
 import { collection } from '@firebase/firestore';
 import { query, orderBy, limit } from "firebase/firestore";
 import { Observable } from 'rxjs';
+import { Education } from 'src/app/module/about/education.typing';
+import { Experience } from 'src/app/module/about/experience.typing';
 import { Intro } from 'src/app/module/intro/intro.typing';
 import { Service } from 'src/app/module/services/service.typing';
 import { Skill } from 'src/app/module/skills/skills.typing';
@@ -15,6 +17,8 @@ export class FirebaseService {
   introduction$: Observable<Intro[]> | any;
   services$: Observable<Service[]> | any;
   skills$: Observable<Skill[]> | any;
+  experience$: Observable<Experience[]> | any;
+  education$: Observable<Education[]> | any;
 
   constructor(private fs: Firestore) {
   }
@@ -31,6 +35,21 @@ export class FirebaseService {
     const collect = collection(this.fs, 'services');
     this.services$ = collectionData(collect);
     return this.services$;
+  }
+
+  // Get Experiences
+  getExperiences(): Observable<Experience[]> {
+    const collect = collection(this.fs, 'experience')
+    this.experience$ = collectionData(collect);
+    return this.experience$;
+  }
+
+  // Get Educations
+  getEducations(): Observable<Education[]> {
+    const collect = collection(this.fs, 'educations');
+    // const reverseData: any =  reverse(collect);
+    this.education$ = collectionData(collect);
+    return this.education$;
   }
 
   // Get Skills

@@ -26,4 +26,12 @@
         max-width: 14.6875em;
         padding: 0.9em;
     }
+    &[disabled] {
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #888;
+        }
+    }
 }

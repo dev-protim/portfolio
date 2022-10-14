@@ -66,3 +66,22 @@
         }
     }
 }
+.error-message {
+    font-size: 0.8em;
+    color: #fc490b;
+    margin-top: 0.3em;
+}
+.main-btn {
+    & + p {
+        margin-left: 0;
+        margin-top: 0.9em;
+        flex: 1;
+        text-align: center;
+    }
+    @include abstract.respond-to('small') {
+        & + p {
+            margin-left: 15px;
+            flex: 0 0 auto;
+        }
+    }
+}

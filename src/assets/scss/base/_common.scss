@@ -1,5 +1,17 @@
 @use '../abstracts/index' as abstract;
 
+html {
+    overflow: hidden;
+    &.loaded {
+        overflow: inherit;
+        .loader {
+            opacity: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+    }
+}
+
 header {
     padding-top: 50px;
     padding-bottom: 50px;

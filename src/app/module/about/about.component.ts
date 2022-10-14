@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  experience: any;
+  education: any;
+  reverseEducation: any;
+
+  constructor(private fs: FirebaseService) { }
 
   ngOnInit(): void {
+    this.experience = this.fs.getExperiences();
+    this.fs.getEducations().subscribe(data => {
+      this.education = data;
+      this.reverseEducation = this.education.reverse();
+    });
   }
 
 }

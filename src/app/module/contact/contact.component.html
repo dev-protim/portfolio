@@ -6,24 +6,24 @@
         </div>
         <div class="row">
             <div class="col-sm-6 contact-info__item">
-                <div class="contact-info__inner custom-card">
+                <div class="contact-info__inner custom-card" *ngFor="let intro of introduction | async">
                     <div class="contact-info__icon">
                         <i class="flaticon-phone"></i>
                     </div>
                     <div class="contact-info__details">
                         <h3>Phone</h3>
-                        <a href="tel:+8801781610033">+8801781610033</a>
+                        <a [href]="'tel:'+intro.phone">{{intro.phone}}</a>
                     </div>
                 </div>
             </div>
             <div class="col-sm-6 contact-info__item">
-                <div class="contact-info__inner custom-card">
+                <div class="contact-info__inner custom-card" *ngFor="let intro of introduction | async">
                     <div class="contact-info__icon">
                         <i class="flaticon-mail"></i>
                     </div>
                     <div class="contact-info__details">
                         <h3>Email</h3>
-                        <a href="mailto:roypranto445@gmail.com">roypranto445@gmail.com</a>
+                        <a [href]="'mailto:'+intro.email">{{intro.email}}</a>
                     </div>
                 </div>
             </div>
@@ -36,24 +36,34 @@
                         <div class="input-field">
                             <input type="text" placeholder="Name*" formControlName="name">
                         </div>
+                        <p class="error-message" *ngIf="f.name && f.name.invalid && f.name.touched">Please enter your name!</p>
                     </div>
                     <div class="col-sm-6">
                         <div class="input-field">
-                            <input type="text" placeholder="Email*" formControlName="email">
+                            <input type="text" placeholder="Phone (with country code)*" formControlName="phone" (keypress)="keyPress($event)">
                         </div>
+                        <p class="error-message" *ngIf="f.phone && f.phone.invalid && f.phone.touched">Please enter your valid phone number!</p>
                     </div>
                     <div class="col-12">
                         <div class="input-field">
-                            <input type="text" placeholder="Phone" formControlName="phone">
+                            <input type="text" placeholder="Email*" formControlName="email">
                         </div>
+                        <p class="error-message" *ngIf="f.email && f.email.invalid && f.email.touched">Please enter your valid email!</p>
+                    </div>
+                    <div class="col-12">
+                        <div class="input-field">
+                            <input type="text" placeholder="Subject*" formControlName="subject">
+                        </div>
+                        <p class="error-message" *ngIf="f.subject && f.subject.invalid && f.subject.touched">Please enter your subject!</p>
                     </div>
                     <div class="col-12">
                         <div class="input-field">
                             <textarea rows="5" placeholder="Message" formControlName="textarea"></textarea>
                         </div>
                     </div>
-                    <div class="col-12 col-sm-6">
-                        <button type="submit" class="main-btn">Submit</button>
+                    <div class="col-12 d-flex align-items-center flex-wrap flex-sm-wrap">
+                        <button type="submit" class="main-btn" [disabled]="contactForm.invalid">Submit</button>
+                        <p class="success-message" *ngIf="isSubmissionSuccessfull">Your submission is successfull & an email has sent.</p>
                     </div>
                 </div>
             </form>

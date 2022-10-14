@@ -17,6 +17,11 @@
                 outline: 0;
                 border: 0;
             }
+            &:-internal-autofill-selected {
+                background-image: none !important;
+                background-color: transparent !important;
+                color: abstract.$white !important;
+            }
         }
         textarea {
             resize: vertical;
