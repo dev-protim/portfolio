@@ -1,0 +1,198 @@
+@use '../../../assets/scss/abstracts/index' as abstract;
+
+.pdf {
+    &-box {
+        text-align: left;
+        color: abstract.$black;
+
+        // width: 790px;
+        // height: 500px;
+        background-color: #ffffff;
+        &__inner {
+            // margin: 200px;
+            // margin-left: 120px;
+            margin: 70px;
+        }
+
+        &__header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px;
+
+            &--img {
+                flex: 0 0 auto;
+                width: 200px;
+                height: 200px;
+                border: 1px solid #000000;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+
+                img {
+                    width: 100%;
+                }
+            }
+            &--content {
+                -ms-flex: 1;
+                flex: 1;
+                text-align: left;
+                padding-left: 30px;
+                h3 {
+                    font-size: 30px;
+                    font-weight: 600;
+                    color: abstract.$black;
+                    margin-bottom: 40px;
+                }
+                p {
+                    font-size: 20px;
+                    color: abstract.$black;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            &--item {
+                &:not(:last-child) {
+                    margin-bottom: 45px;
+                }
+                h3 {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: abstract.$black;
+                    border-bottom: 1px solid abstract.$black;
+                    padding-bottom: 10px;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font-size: 16px;
+                    color: abstract.$black;
+                    text-align: justify;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            &--list {
+                li {
+                    list-style: none;
+                    font-size: 16px;
+                    display: flex;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        &__profile {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            &--list {
+                padding-left: 0;
+                li {
+                    list-style: none;
+                    font-size: 16px;
+                    display: flex;
+                    color: abstract.$black;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    strong {
+                        width: 200px;
+                    }
+                    span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+        &__work {
+            &--item {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+            &--title {
+                font-weight: 600;
+                font-size: 18px;
+                display: flex;
+                margin-bottom: 13px;
+                span {
+                    padding-left: 10px;
+                }
+            }
+            &--inner {
+                padding-left: 40px;
+                p {
+                    font-size: 16px;
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                }
+                ul {
+                    padding-left: 0;
+                    li {
+                        font-size: 16px;
+                        list-style: none;
+                        span {
+                            padding-left: 10px;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        &__education {
+            &--item {
+                display: flex;
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+            &--details {
+                -ms-flex: 1;
+                flex: 1;
+                padding-right: 15px;
+                p {
+                    font-size: 16px;
+                    &:not(:last-child) {
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+            &--period {
+                font-size: 16px;
+            }
+        }
+        &__reference {
+            display: flex;
+            &--item {
+                -ms-flex: 1;
+                flex: 1;
+                text-align: center;
+                h3 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 7px;
+                    border-bottom: 0;
+                    padding-bottom: 0;
+                }
+                p {
+                    font-size: 16px;
+                    text-align: center;
+                    &:not(:last-child) {
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,11 +9,13 @@ import { FirebaseService } from 'src/app/services/firebase/firebase.service';
 export class SkillsComponent implements OnInit {
 
   skills: any;
+  introduction: any;
 
   constructor(private fs: FirebaseService) { }
 
   ngOnInit(): void {
     this.skills = this.fs.getSkills();
+    this.introduction = this.fs.getIntroduction();
   }
 
 }

@@ -4,7 +4,14 @@
             <div class="header-title__image" [style.backgroundImage]="'url('+intro.thumb+')'"></div>
             <h1>{{intro.name}}</h1>
             <p>I am a <strong>{{intro.designation}}</strong></p>
-            <a href="https://firebasestorage.googleapis.com/v0/b/portfolio-f2044.appspot.com/o/cv%20-%20professional.pdf?alt=media&token=e58eb2c2-3900-4af1-86b6-3cfa5508c5b4" type="button" class="main-btn" download target="_blank">Get Resume <i class="flaticon-download"></i></a>
+            <a [href]="intro.cv" type="button" class="main-btn" download target="_blank">Get Resume <i class="flaticon-download"></i></a>
+            <!-- <button class="main-btn" (click)="generatePDF()">Get Resume <i class="flaticon-download"></i></button> -->
+            <!-- <button (click)="generatePDF()">click</button> -->
+            <!-- <div class="pdf-template" #pdfTemplate>
+                <app-pdf-template></app-pdf-template>
+            </div> -->
+            <!-- <button class="main-btn" (click)="generatePDF()">Get Resume <i class="flaticon-download"></i></button> -->
+            <!-- https://firebasestorage.googleapis.com/v0/b/portfolio-f2044.appspot.com/o/cv%20-%20professional.pdf?alt=media&token=e58eb2c2-3900-4af1-86b6-3cfa5508c5b4 -->
         </div>
     </div>
 </header>

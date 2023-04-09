@@ -1,0 +1,112 @@
+<button (click)="print()">click</button>
+<div class="pdf-box" #pdfTemplate>
+    <div class="pdf-box__inner">
+        <div class="pdf-box__header" *ngFor="let intro of introduction">
+            <div class="pdf-box__header--img">
+                <img [src]="intro.thumb" alt="">
+            </div>
+            <div class="pdf-box__header--content">
+                <h3>{{intro.name}}</h3>
+                <p><b>Phone:</b>&nbsp;{{intro.phone}}</p>
+                <p><b>Email:</b>&nbsp;{{intro.email}}</p>
+                <p>{{intro.address}}</p>
+            </div>
+        </div>
+        <div class="pdf-box__body">
+            <div class="pdf-box__body--item">
+                <h3>PROFILE</h3>
+                <p>Energetic Front-end Web Developer with 3 years+ experience in creating and maintaining functional, attractive, and responsive websites for few companies. Clear understanding of modern technologies and design practices with Angular environments</p>
+                <div class="pdf-box__profile">
+                    <ul class="pdf-box__profile--list">
+                        <li><strong>Github:</strong> <span>https://github.com/dev-protim</span></li>
+                        <li><strong>LinkedIn:</strong> <span>https://www.linkedin.com/in/devprotim/</span></li>
+                        <li><strong>Instant Messenger:</strong> <span>prantoroy12 (Skype)</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>EMPLOYMENT HISTORY</h3>
+                <div class="pdf-box__work">
+                    <div class="pdf-box__work--item">
+                        <div class="pdf-box__work--title">{{1}}. <span>Web Designer, Yotech Limited, Sylhet - https://yotech.ltd/</span></div>
+                        <div class="pdf-box__work--inner">
+                            <p>April 2021 – September 2022</p>
+                            <p>As the Web Designer, my core activities included:</p>
+                            <ul>
+                                <li>● <span>Working with Angular</span></li>
+                                <li>● <span>With and without XD and PSD to HTML in Angular environment</span></li>
+                            </ul>
+                            <p><strong>Work History:</strong></p>
+                            <p>Below are the details of some projects that I have done:</p>
+                            <ul>
+                                <li>● <span> Traip - Travel & Tour Booking HTML Template by EnvyTheme | ThemeForest</span></li>
+                                <li>● <span> Traip - Travel & Tour Booking HTML Template by EnvyTheme | ThemeForest</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>EDUCATION</h3>
+                <div class="pdf-box__education">
+                    <div class="pdf-box__education--item">
+                        <div class="pdf-box__education--details">
+                            <p><strong>B.Sc (HONS) in Engineering</strong></p>
+                            <p>Department of Computer Science & Engineering</p>
+                            <p>Leading University, Sylhet</p>
+                            <p>CGPA: <strong>3.50</strong> (4.00)</p>
+                        </div>
+                        <div class="pdf-box__education--period">2014-2018</div>
+                    </div>
+                    <div class="pdf-box__education--item">
+                        <div class="pdf-box__education--details">
+                            <p><strong>B.Sc (HONS) in Engineering</strong></p>
+                            <p>Department of Computer Science & Engineering</p>
+                            <p>Leading University, Sylhet</p>
+                            <p>CGPA: <strong>3.50</strong> (4.00)</p>
+                        </div>
+                        <div class="pdf-box__education--period">2014-2018</div>
+                    </div>
+                </div>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>SKILLS</h3>
+                <ul class="pdf-box__body--list">
+                    <li>● <span><strong>Programming Languages:</strong> C(mid-level), JAVA(basic)</span></li>
+                    <li>● <span><strong>Web:</strong> HTML5, CSS3 with CSS pre-processor SCSS and LESS, Bootstrap, Tailwind CSS, jQuery(mid-level), JavaScript(mid-level), Angular, AngularJS</span></li>
+                </ul>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>EXTRACURRICULAR ACTIVITIES</h3>
+                <ul class="pdf-box__body--list">
+                    <li>● <span>Solved more than 50 problems in online OJ like URI</span></li>
+                    <li>● <span><strong>Judge, Muslim Shahittho Shongshad,</strong> 21st March 2018 – 22rd March 2018, Responsible for
+                        drawing competition.</span></li>
+                </ul>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>LANGUAGE SKILLS</h3>
+                <ul class="pdf-box__body--list">
+                    <li>● <span><strong>Languages:</strong> Working knowledge in English.</span></li>
+                </ul>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>PERSONAL INFORMATION</h3>
+                <p><strong>Father's Name: </strong>Bishnu Pada Roy</p>
+                <p><strong>Father's Name: </strong>Bishnu Pada Roy</p>
+            </div>
+            <div class="pdf-box__body--item">
+                <h3>REFERENCES</h3>
+                <div class="pdf-box__reference">
+                    <div class="pdf-box__reference--item">
+                        <h3>Prabal Bhattacherjee</h3>
+                        <p>Software Engineer</p>
+                        <p>yotech.ltd</p>
+                        <p>Cell: +8801720848705</p>
+                        <p>E-mail: prabal230193@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

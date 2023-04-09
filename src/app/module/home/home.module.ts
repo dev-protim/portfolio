@@ -9,6 +9,7 @@ import { SkillsComponent } from '../skills/skills.component';
 import { AboutComponent } from '../about/about.component';
 import { ContactComponent } from '../contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PdfTemplateComponent } from 'src/app/pdf/pdf-template/pdf-template.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ServicesComponent,
     SkillsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    PdfTemplateComponent
   ],
   imports: [
     CommonModule,
